@@ -297,7 +297,7 @@ def ui_slack():
 
     with tab4:
         channel_id = st.text_input("channel_id", value="C09ARGZNCFP", placeholder="예: C099U6GK6DR", key="slack_react_channel")
-        message_timestamp = st.text_input("message_timestamp", value="1755503557", placeholder="예: 1755020881.314499")
+        message_timestamp = st.text_input("message_timestamp", value="1755568008.087599", placeholder="예: 1755568008.087599")
         if st.button("실행", key="slack_react_btn"):
             out = post_form(f"{N8N_BASE}/slack/reaction", {
                 "channel_id": channel_id,
@@ -307,7 +307,7 @@ def ui_slack():
 
     with tab5:
         channel_id = st.text_input("channel_id", value="C09ARGZNCFP", placeholder="예: C099U6GK6DR", key="slack_remove_channel")
-        message_timestamp = st.text_input("message_timestamp", value="1755503557", placeholder="예: 1755020881.314499", key="slack_remove_ts")
+        message_timestamp = st.text_input("message_timestamp", value="1755568008.087599", placeholder="예: 1755568008.087599", key="slack_remove_ts")
         if st.button("실행", key="slack_remove_btn"):
             out = post_form(f"{N8N_BASE}/slack/remove_reaction", {
                 "channel_id": channel_id,
